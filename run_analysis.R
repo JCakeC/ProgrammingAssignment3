@@ -3,20 +3,20 @@ require(stringr)
 # 0.- Load Data
 # To save bandwidth I am assuming you already have downloaded the zip file from:
 # https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-# Please make sure to download the data and extract it to the Data Folder.
+# Please make sure to download the data and extract it to the current Folder.
 
-features <- read.table("./Data/features.txt")
-activity_labels <- read.table("./Data/activity_labels.txt")
+features <- read.table("features.txt")
+activity_labels <- read.table("activity_labels.txt")
 # name the columns for easy access later
 colnames(features) <- c("id", "feature")
 colnames(activity_labels) <- c("id", "activity")
 
-test_x <- read.table("./Data/test/X_test.txt")
-test_y <- read.table("./Data/test/Y_test.txt")
-test_subject <- read.table("./Data//test/subject_test.txt")
-train_x <- read.table("./Data/train/X_train.txt")
-train_y <- read.table("./Data/train/Y_train.txt")
-train_subject <- read.table("./Data/train/subject_train.txt")
+test_x <- read.table("test/X_test.txt")
+test_y <- read.table("test/Y_test.txt")
+test_subject <- read.table("test/subject_test.txt")
+train_x <- read.table("train/X_train.txt")
+train_y <- read.table("train/Y_train.txt")
+train_subject <- read.table("train/subject_train.txt")
 
 # 1.- Merge the training and the test sets to create one data set.
 # X are features, Y are activities. 
