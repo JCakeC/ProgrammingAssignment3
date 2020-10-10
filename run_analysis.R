@@ -51,7 +51,7 @@ tidy_dataset <- full_dataset %>%
   group_by(subjectId, activityId, activity) %>%
   summarise_all(list(mean))
 
-write.table(tidy_dataset, "./Export/tidy_data.txt")
+write.table(tidy_dataset, "./Export/tidy_data.txt", row.name=FALSE)
 
 #6.- Always clean up after ourselves, we will not use the variables, but the 
 #    tidy_dataset, so let's remove all the other ones:
